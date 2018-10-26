@@ -33,7 +33,7 @@ execute "db create" do
 end
 
 execute "wp deploy" do
-   command "wp core install --url=#{public_hostname} --title=Test --admin_name=admin --admin_password=admin --admin_email=n3-hamada@bns-g.com"
+   command "wp core install --url=#{public_hostname} --title=Test --admin_name=admin --admin_password=admin --admin_email=#{wp_admin_email}"
    cwd "#{wpdir}"
    user "deploy"
    action :run
